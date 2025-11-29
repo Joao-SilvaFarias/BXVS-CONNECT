@@ -36,7 +36,7 @@ export default function Checkin({ listaCheckin, setClicado, clicado, setAlunoSel
                 </div>
             </div>
             <div className={styles.checkins}>
-                <p className={styles.titleCheckin}>Check ins</p>
+                <p className={styles.titleCheckin}>Check ins</p >
                 <div className={styles.titlesLista}>
                     <p className={styles.ajuste}>Nome:</p>
                     <p className={styles.titleLista}>Chegou em:</p>
