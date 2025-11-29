@@ -121,6 +121,7 @@ export default function App() {
               pagina={pagina}
               ativo={ativo} 
               setAtivo={setAtivo}
+              setMenuFechado={setMenuFechado}
             />
             {abrirMain ?
               <main>

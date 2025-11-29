@@ -7,7 +7,7 @@ import { PiGearFineBold } from "react-icons/pi";
 import { GiLockedDoor } from "react-icons/gi";
 import { TbUserScan } from "react-icons/tb";
 
-export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, ativo, setAtivo }) {
+export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, ativo, setAtivo, setMenuFechado }) {
 
   return (
     <div className={`${styles.menu} ${menuFechado ? styles.fechado : ""}`}>
@@ -25,6 +25,7 @@ export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, 
           abrirMain={abrirMain}
           setAbrirMain={setAbrirMain}
           onClick={() => setPagina("Controle de Acesso")}
+          setMenuFechado={setMenuFechado}
         />
         <LinkMenu
           Icon={LuSquareUser}
@@ -34,6 +35,7 @@ export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, 
           abrirMain={abrirMain}
           setAbrirMain={setAbrirMain}
           onClick={() => setPagina("Gestão de Alunos")}
+          setMenuFechado={setMenuFechado}
         />
         <LinkMenu
           Icon={GoGraph}
@@ -43,6 +45,7 @@ export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, 
           abrirMain={abrirMain}
           setAbrirMain={setAbrirMain}
           onClick={() => setPagina("Dashboard")}
+          setMenuFechado={setMenuFechado}
         />
         <LinkMenu
           Icon={TbUserScan}
@@ -52,6 +55,7 @@ export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, 
           abrirMain={abrirMain}
           setAbrirMain={setAbrirMain}
           onClick={() => setPagina("Checkin")}
+          setMenuFechado={setMenuFechado}
         />
       </div>
 
@@ -65,6 +69,7 @@ export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, 
           abrirMain={abrirMain}
           setAbrirMain={setAbrirMain}
           onClick={() => setPagina("Configurações")}
+          setMenuFechado={setMenuFechado}
         />
         <LinkMenu
           Icon={LuCircleHelp}
@@ -74,6 +79,7 @@ export default function Menu({ abrirMain, setAbrirMain, menuFechado, setPagina, 
           abrirMain={abrirMain}
           setAbrirMain={setAbrirMain}
           onClick={() => setPagina("Ajuda")}
+          setMenuFechado={setMenuFechado}
         />
       </div>
     </div>

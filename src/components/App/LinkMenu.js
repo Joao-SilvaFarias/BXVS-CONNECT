@@ -1,6 +1,6 @@
 import styles from "./LinkMenu.module.css";
 
-export default function LinkMenu({ Icon, texto, ativo, setAtivo, abrirMain, setAbrirMain, onClick }) {
+export default function LinkMenu({ Icon, texto, ativo, setAtivo, abrirMain, setAbrirMain, onClick, setMenuFechado }) {
   return (
     <div
       className={`${styles.linkMenu} ${ativo ? styles.linkAtivo : ""}`}
@@ -8,6 +8,7 @@ export default function LinkMenu({ Icon, texto, ativo, setAtivo, abrirMain, setA
         setAtivo(texto);
         if (!abrirMain) setAbrirMain(true);
         if (onClick) onClick();
+        setMenuFechado(true);
       }}
     >
       <Icon size={15}/>
