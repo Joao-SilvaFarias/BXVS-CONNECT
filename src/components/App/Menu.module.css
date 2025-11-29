@@ -1,5 +1,6 @@
 .menu {
   min-width: 280px;
+  height: calc(100vh - 30px);
   border-radius: 30px;
   background-color: #1e1e1e;
   transition: 0.5s;
@@ -37,4 +38,11 @@
   width: 100%;
   padding: 20px;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 1300px) {
+  .menu{
+    position: fixed;
+    z-index: 5;
+  }
 }

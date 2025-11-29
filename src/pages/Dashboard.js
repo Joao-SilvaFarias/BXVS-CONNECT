@@ -126,8 +126,7 @@ export default function Dashboard() {
             {faixaEtaria && 
             receitaTotal ? 
             <>
-            <div className={styles.containerCardsMenores}>
-                <div className={styles.containerFiltro}>
+            <div className={styles.containerFiltro}>
                     <button className={styles.btnFiltrar}><LuSlidersHorizontal style={{ zIndex: 2 }} size={15} strokeWidth={2.5} onClick={() => setFiltro(!filtro)} /></button>
                     <p className={styles.labelFiltro}>Filtrar por: {txtFiltro}</p>
                     <div className={`${styles.listaFiltro} ${filtro && styles.filtroAberto}`}>
@@ -136,6 +135,7 @@ export default function Dashboard() {
                         <p className={styles.itemFiltro} onClick={() => { setTxtFiltro("Ano"); setFiltro(!filtro) }}>Ano</p>
                     </div>
                 </div>
+            <div className={styles.containerCardsMenores}>
                 <CardMenor Icon={LuCircleDollarSign} titulo="Receita total" conteudo={receitaTotal} cor="#9ECD1D" />
                 <CardMenor Icon={HiArrowTrendingUp} titulo="Lucro mensal" conteudo={lucroMensal} cor="#fff" />
                 <CardMenor Icon={LuScrollText} titulo="Pagamentos pendentes" conteudo={pagamentosPendentes} cor="#FFC300" />
@@ -144,15 +144,15 @@ export default function Dashboard() {
             <div className={styles.containerCardsMaiores}>
                 <div className={styles.linhaCardsMaiores}>
                     <GraficoPlanos dados={planosMaisEscolhidos} />
-                    <GraficoBarras dados={faturamentoMes} titulo="Faturamento p/mês" minTickGap={20} dataKey={"faturamento"} />
+                    <GraficoBarras dados={faturamentoMes} titulo="Faturamento p/mês" minTickGap={20} dataKey={"Faturamento"} />
                 </div>
                 <div className={styles.linhaCardsMaiores}>
                     <GraficoBarras dados={movimentoSemanal} titulo="Movimento semanal" minTickGap={50} dataKey={"porcentagem"} />
                     <GraficoMovimentoPorTurno dados={movimentoTurno} />
                 </div>
                 <div className={styles.linhaCardsMaiores}>
-                    <GraficoBarrasHorizontais dados={publico} titulo="Público" />
-                    <GraficoBarrasHorizontais dados={faixaEtaria} titulo="Faixa etária" />
+                    <GraficoBarrasHorizontais dados={publico} titulo="Público" dataKey="Alunos" />
+                    <GraficoBarrasHorizontais dados={faixaEtaria} titulo="Faixa etária" dataKey="Alunos" />
                 </div>
             </div>
             </> : <p>Carregando...</p>}

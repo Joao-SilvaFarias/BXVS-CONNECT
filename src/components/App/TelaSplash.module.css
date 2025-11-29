@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 999;
   color: #fff;
 }
 

@@ -26,13 +26,18 @@ export default function ControleAcesso({setPagina, setAlunoSelecionadoGestaoAlun
             <div className={styles.conteudo}>
                 <input type="text" placeholder="Pesquisar alunos" className={styles.barraPesquisa} />
                 <div className={styles.cards}>
-                    <Checkin clicado={clicado} listaCheckin={listaCheckin} setAlunoSelecionado={setAlunoSelecionado} setClicado={setClicado} />
+                    <Checkin 
+                    clicado={clicado} 
+                    listaCheckin={listaCheckin} 
+                    setAlunoSelecionado={setAlunoSelecionado} 
+                    setClicado={setClicado} />
                     <Aluno 
                     alunoSelecionado={alunoSelecionado} 
                     setAlunoSelecionado={setAlunoSelecionado} 
                     setPagina={setPagina} 
                     setAlunoSelecionadoGestaoAlunos={setAlunoSelecionadoGestaoAlunos}
                     setAtivo={setAtivo}
+                    setClicado={setClicado}
                     />
                 </div>
             </div>

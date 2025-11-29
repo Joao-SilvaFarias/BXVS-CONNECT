@@ -35,7 +35,7 @@ const CustomLegend = ({ payload }) => (
 
 export default function GraficoPlano({ dados }) {
   return (
-    <div className={styles.containerGraficoPlanos}>
+    <div className={styles.container}>
       <p className={styles.titulo}>Planos mais escolhidos</p>
       {dados ? 
       <ResponsiveContainer>

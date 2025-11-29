@@ -2,7 +2,7 @@ import { useState } from "react"
 import styles from "./Login.module.css"
 import axios from "axios";
 
-export default function Login({setLogin, setAdm}){
+export default function Login({setLogin, setAdm, setPagina}){
 
     const[usuario, setUsuario] = useState({});
 
@@ -34,6 +34,9 @@ export default function Login({setLogin, setAdm}){
                 <input type="text" className={styles.inputLogin} placeholder="Nome de usuário" onChange={change} name="usuario"/>
                 <input type="text" className={styles.inputLogin} placeholder="COD. Acesso" onChange={change} name="cod"/>
                 <input type="submit" className={styles.btnEntrar} value="Entrar" onClick={login}/>
+                <div className={styles.containerLink}>
+                    <a href="/login-administrador" className={styles.linkLoginAdm} onClick={() => setLogin("Login Administrador")}>Entrar como administrador</a>
+                </div>
             </div>
         </div>
     )

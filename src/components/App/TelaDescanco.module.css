@@ -4,7 +4,7 @@
   width: 100%;
   background-size: cover;
   background-image: url("../../../public/img/bkSplash.jpg");
-  z-index: 3;
+  z-index: 999;
   transition: opacity 0.5s ease;
   opacity: 0;
   display: none;

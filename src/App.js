@@ -10,6 +10,7 @@ import GestaoAlunos from "./pages/GestaoAlunos";
 import Dashboard from "./pages/Dashboard";
 import Configuracoes from "./pages/Configuracoes";
 import Checkin from "./pages/Checkin";
+import LoginAdministrador from "./pages/LoginAdministrador";
 
 export default function App() {
   const [abrirMain, setAbrirMain] = useState(false);
@@ -71,6 +72,11 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if(window.innerWidth > 1024) return;
+    menuFechado ? setBlur(false) : setBlur(true);
+  }, [menuFechado]);
+
+  useEffect(() => {
     const showSplash = () => {
       setFade(true);
       setTimeout(() => {
@@ -78,18 +84,6 @@ export default function App() {
       }, 500);
     }
     setTimeout(() => showSplash(), 3000);
-  }, []);
-
-  useEffect(() => {
-    const menu = () => {
-      if (window.innerWidth < 1024) {
-        setMenuFechado(true);
-      } else {
-        setMenuFechado(false);
-      }
-    }
-    menu();
-    window.addEventListener("resize", menu);
   }, []);
 
   useEffect(() => {
@@ -107,7 +101,7 @@ export default function App() {
 
   return (
     <>
-      {blur && <div className={styles.blur} onClick={() => { setLembreteGeral(false); setBlur(false); setFormContatarAluno(false); }}></div>}
+      {blur && <div className={styles.blur} onClick={() => { setLembreteGeral(false); setBlur(false); setFormContatarAluno(false); setMenuFechado(true);}}></div>}
       {login ? (
         <>
           {telaSplash && <TelaSplash fade={fade} />}
@@ -142,7 +136,7 @@ export default function App() {
           </div>
         </>
       ) : (
-        <Login setLogin={setLogin} setAdm={setAdm} />
+        <Login setLogin={setLogin} setAdm={setAdm} setPagina={setPagina} />
       )}
     </>
   );

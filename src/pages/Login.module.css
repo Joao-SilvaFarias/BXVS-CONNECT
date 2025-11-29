@@ -113,3 +113,26 @@ input{
 .btnEntrar:active {
   background-color: #7FA417;
 }
+
+.ancoraAdministrador{
+  text-decoration: none;
+  width: 100%;
+  text-align: end;
+}
+
+.containerLink{
+  width: 100%;
+  text-align: end;
+}
+
+.linkLoginAdm{
+  color: #0b95ff;
+  font-family: "Inter";
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.linkLoginAdm:hover{
+  transition: 0.3s;
+  color: #46afff;
+}

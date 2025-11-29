@@ -2,7 +2,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recha
 import styles from "./Graficos.module.css"
 
 
-export default function GraficoBarrasHorizontais({dados, titulo}) {
+export default function GraficoBarrasHorizontais({dados, titulo, dataKey}) {
   return (
     <div className={styles.container}>
       <p className={styles.titulo}>{titulo}</p>
@@ -31,7 +31,7 @@ export default function GraficoBarrasHorizontais({dados, titulo}) {
             }}
           />
           <Bar
-            dataKey="valor"
+            dataKey={dataKey}
             fill="#9ECD1D"
             background={{fill: "rgba(158, 205, 29, 0.3)", radius: 10}}
             radius={10} // 🔹 bordas arredondadas

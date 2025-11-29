@@ -9,19 +9,19 @@ export default function GraficoBarras({ dados, titulo, minTickGap, dataKey }) {
             {dados ? 
             <ResponsiveContainer height="100%" width="100%">
                 <BarChart
-                    barSize={12}
+                    barSize={20}
                     data={dados}
                     responsive
                 >
                     <YAxis width="auto" tickLine={false} minTickGap={minTickGap} tick={{ fill: "#D5E3AE", }} tickFormatter={value => `${titulo === "Faturamento p/mês" ? "R$" : ""}${value}${titulo === "Movimento semanal" ? "%" : ""}`} />
                     <XAxis dataKey={dataKey === "porcentagem" ? "diaSemana" : "mes"} tickLine={false} tick={{ fill: "#D5E3AE" }} />
-                    <CartesianGrid horizontal={true} vertical={true} stroke="#D5E3AE" />
+                    <CartesianGrid horizontal={false} vertical={false} stroke="#D5E3AE" />
                     <Tooltip cursor={false} contentStyle={{
                         background: "rgba(0, 0, 0, 0.8)",
                         borderWidth: 0,
                         borderRadius: 10
                     }} />
-                    <Bar dataKey={dataKey} fill="#9ECD1D" radius={5} isAnimationActive={false} />
+                    <Bar dataKey={dataKey} fill="#9ECD1D" radius={5} isAnimationActive={false} minPointSize={10} />
                 </BarChart>
             </ResponsiveContainer> : <p className={styles.txtGraficoVazio}>Ainda não há {titulo}</p>}
             

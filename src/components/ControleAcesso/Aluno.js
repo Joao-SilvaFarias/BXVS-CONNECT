@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import styles from "./Aluno.module.css"
 import Lembrete from "./Lembrete";
 
-export default function Aluno({ alunoSelecionado, setAlunoSelecionado, setPagina, setAlunoSelecionadoGestaoAlunos, setAtivo }) {
+export default function Aluno({ alunoSelecionado, setAlunoSelecionado, setPagina, setAlunoSelecionadoGestaoAlunos, setAtivo, setClicado }) {
     const [lembrete, setLembrete] = useState("")
     const [toastLembrete, setToastLembrete] = useState(false);
     const [temposDesativados, setTemposDesativados] = useState({});
@@ -51,7 +51,7 @@ export default function Aluno({ alunoSelecionado, setAlunoSelecionado, setPagina
 
     return (
         <div className={`${styles.aluno} ${popUp ? styles.popUp : ""} ${alunoSelecionado ? styles.popUpVisible : ""}`}>
-            {popUp && <button className={styles.btnFechar} onClick={() => setAlunoSelecionado("")}>X</button>}
+            {popUp && <button className={styles.btnFechar} onClick={() => {setAlunoSelecionado(null); setClicado(null)}}>X</button>}
             <p className={styles.alunoSelecionado}>Aluno selecionado</p>
             {!alunoSelecionado ? (
                 <p className={styles.placeholderAluno}>Clique em um aluno para ver<br /> mais informações</p>

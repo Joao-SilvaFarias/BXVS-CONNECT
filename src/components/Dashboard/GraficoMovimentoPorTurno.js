@@ -14,7 +14,7 @@ export default function GraficoMovimentoPorTurno({dados}) {
     }));
 
     return (
-        <div className={styles.graficoTurno}>
+        <div className={styles.container}>
             <div className={styles.headerGraficoTurno}>
                 <p className={styles.titulo}>Movimento p/turno</p>
 
@@ -35,7 +35,6 @@ export default function GraficoMovimentoPorTurno({dados}) {
                 </div>}
             </div>
             {dados ? <ResponsiveContainer width="100%" height="100%" style={{position: "relative"}}>
-                <p className={styles.txtMeioGraficoCircular}>100%</p>
                 <RadialBarChart
                     cx="50%"
                     cy="50%"
