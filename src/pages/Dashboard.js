@@ -126,7 +126,8 @@ export default function Dashboard() {
             {faixaEtaria && 
             receitaTotal ? 
             <>
-            <div className={styles.containerFiltro}>
+            <div className={styles.containerLeft}>
+                <div className={styles.containerFiltro}>
                     <button className={styles.btnFiltrar}><LuSlidersHorizontal style={{ zIndex: 2 }} size={15} strokeWidth={2.5} onClick={() => setFiltro(!filtro)} /></button>
                     <p className={styles.labelFiltro}>Filtrar por: {txtFiltro}</p>
                     <div className={`${styles.listaFiltro} ${filtro && styles.filtroAberto}`}>
@@ -140,6 +141,7 @@ export default function Dashboard() {
                 <CardMenor Icon={HiArrowTrendingUp} titulo="Lucro mensal" conteudo={lucroMensal} cor="#fff" />
                 <CardMenor Icon={LuScrollText} titulo="Pagamentos pendentes" conteudo={pagamentosPendentes} cor="#FFC300" />
                 <CardMenor Icon={LuUserRoundCheck} titulo="Matrícula nesse mês" conteudo={matriculasMes} cor="#fff" />
+            </div>
             </div>
             <div className={styles.containerCardsMaiores}>
                 <div className={styles.linhaCardsMaiores}>

@@ -14,7 +14,7 @@ import LoginAdministrador from "./pages/LoginAdministrador";
 
 export default function App() {
   const [abrirMain, setAbrirMain] = useState(false);
-  const [menuFechado, setMenuFechado] = useState(false);
+  const [menuFechado, setMenuFechado] = useState(window.innerWidth < 1300);
   const [pagina, setPagina] = useState("ControleAcesso");
   const [login, setLogin] = useState(false);
   const [telaSplash, setTelaSplash] = useState(true);

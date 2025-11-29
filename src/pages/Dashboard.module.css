@@ -6,6 +6,13 @@
     gap: 20px;
 }
 
+.containerLeft{
+    width: fit-content;
+    display: flex;
+        flex-direction: column;
+        gap: 20px;
+}
+
 .containerCardsMenores {
     display: flex;
     flex-direction: column;
@@ -174,6 +181,10 @@
 @media screen and (max-width: 1300px) {
     .container{
         flex-direction: column;
+    }
+
+    .containerLeft{
+        width: 100%;
     }
 
     .containerCardsMenores{

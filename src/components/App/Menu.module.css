@@ -1,6 +1,6 @@
 .menu {
   min-width: 280px;
-  height: calc(100vh - 30px);
+  height: 100%;
   border-radius: 30px;
   background-color: #1e1e1e;
   transition: 0.5s;
