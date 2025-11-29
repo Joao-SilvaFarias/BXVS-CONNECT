@@ -74,3 +74,20 @@ header {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 768px) {
+  .container{
+    padding: 0;
+  }
+  .imgTitleMenu{
+    left: 15px;
+    top: 15px;
+  }
+  .imgTitleMenu{
+    top: 10px;
+  }
+  main{
+    padding-inline: 10px;
+    border-radius: 0;
+  }
+}
