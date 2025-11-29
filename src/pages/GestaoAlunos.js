@@ -39,6 +39,19 @@ export default function GestaoAlunos({
     const [txtPesquisa, setTxtPesquisa] = useState("");
     const [msg, setMsg] = useState("");
     const [alunoSelecionado, setAlunoSelecionado] = useState(null);
+    const [popUp, setPopUp] = useState(false);
+
+    useEffect(() => {
+        const menu = () => {
+          if (window.innerWidth < 1400) {
+            setPopUp(true);
+          } else {
+            setPopUp(false);
+        }
+        }
+        menu();
+        window.addEventListener("resize", menu);
+      }, []);
 
     const buscarAlunos = async () => {
         await axios.get("https://joaofarias16.pythonanywhere.com/gestaoAlunos/alunos")
@@ -385,8 +398,9 @@ export default function GestaoAlunos({
                             </div>
                         </div>
                     </div>
-                    <div className={styles.containerFicha}>
+                    <div className={`${styles.containerFicha} ${popUp ? styles.popUp : ""} ${alunoSelecionado ? styles.popUpVisible : ""}`}>
                         <p className={styles.tituloFicha}>Ficha completa</p>
+                        {popUp && <button className={styles.btnFechar} onClick={() => {setAlunoSelecionado(null);}}>X</button>}
                         {alunoSelecionado ?
                             <>
                                 <div className={styles.headerFicha}>
