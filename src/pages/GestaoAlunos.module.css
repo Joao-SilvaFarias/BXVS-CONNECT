@@ -709,6 +709,16 @@
         width: fit-content;
     }
 
+    .containerPesquisa {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .containerBarraPesquisa {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
     .btnFechar {
         position: absolute;
         top: 10px;
