@@ -1,5 +1,6 @@
 .container {
     height: 100%;
+    width: 100%;
     font-family: "Inter";
     padding-top: 20px;
     display: flex;
@@ -134,4 +135,10 @@ section {
 
 .btnExcluirFoto{
     background: rgb(189, 0, 0, 0.5);
+}
+
+@media  screen and (max-width: 768px) {
+    select, .inputConfiguracao{
+        width: 100%;
+    }
 }
