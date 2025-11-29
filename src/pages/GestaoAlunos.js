@@ -274,7 +274,7 @@ export default function GestaoAlunos({
                                     <p className={styles.descricaoLembreteGeral}>Envie um lembrete pronto para todos os alunos inadimplentes de uma só vez</p>
                                 </div>
                                 <div className={styles.contanerBotoesLembreteGeral}>
-                                    <button className={styles.btnEnviarLembreteGeral} onClick={enviarLembreteGeral}><FiSend size={15} /> Lembrete geral</button>
+                                    <button className={styles.btnEnviarLembreteGeral} onClick={enviarLembreteGeral}><FiSend size={15} />Enviar lembrete geral</button>
                                     <button className={styles.btnCancelarEnvio} onClick={() => { setLembreteGeral(false); setBlur(false); }}>Cancelar envio</button>
                                 </div>
                                 <div className={styles.headerLembreteGeral}>
@@ -319,7 +319,7 @@ export default function GestaoAlunos({
                                     <input type="text" placeholder="Pesquisar alunos" className={styles.inputPesquisa} value={txtPesquisa} onChange={e => { setTxtPesquisa(e.target.value); pesquisar(e.target.value); }} />
                                 </div>
                                 <button className={`${styles.btnLembreteGeral} ${!btnLembreteGeral && styles.btnDesativado}`} onClick={() => { setLembreteGeral(!lembreteGeral); setBlur(true); }}>
-                                    <p>Enviar lembrete geral</p>
+                                    <p>Lembrete geral</p>
                                     {!btnLembreteGeral ? tempo + "s" : <FiSend size={15} strokeWidth={3} />}
                                 </button>
                                 <div className={styles.containerFiltro}>
