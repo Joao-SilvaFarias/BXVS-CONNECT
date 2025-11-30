@@ -8,7 +8,7 @@ export default function LinkMenu({ Icon, texto, ativo, setAtivo, abrirMain, setA
         setAtivo(texto);
         if (!abrirMain) setAbrirMain(true);
         if (onClick) onClick();
-        if (window.innerWidth < 1024) setMenuFechado(true);
+        if (window.innerWidth < 1300) setMenuFechado(true);
       }}
     >
       <Icon size={15}/>
