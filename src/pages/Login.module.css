@@ -139,25 +139,8 @@ input{
 }
 
 @media screen and (max-width: 768px){
-  .containerLogin{
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
   .gradentLeft{
-    background: none;
-    height: fit-content;
-  }
-  .txtBemVindo{
-    font-size: 30px;
-  }
-  .logoLogin{
-    width: 150px;
-  }
-  .txtTitleLogin{
-    font-size: 35px;
-  }
-  .txtSubTitleLogin{
-    font-size: 16px;
+    display: none;
   }
   .boxLogin{
     padding: 10px;
